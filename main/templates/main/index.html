@@ -1,0 +1,677 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru-RU.utf8">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- это старые здесь были, какие из них важны
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="4Xq9vQrR_KyX9JI1Z21dxf1t9N1oQJc9E45zJDS_wymKLuLVQp7OlPOy-W8IWBuszjujli8f0GJ63wlcWtCCTw=="> -->
+
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="gl6Wxq4lpbOiMveIGZPk4B1oi78295-x4MWSmyxwtKfrDMO23mr65MkFmN5WoZODSwLG7nyCrYLZkf3CQBX9kA==">
+
+        <title>Chelex</title>
+    <meta charset="UTF-8">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/png" href="{% static "front/img/obmen.png" %}"/>
+    <link rel="stylesheet" id="css-main" href="{% static 'front/css/codebase.min.css' %}">
+    <link rel="stylesheet" id="css-main-overwrite" href="{% static 'front/css/main.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
+    <style>
+        html{
+            --page-modal-visible: {{popup_status}}
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-container"
+        class="enable-page-overlay side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
+            <!-- Header -->
+    <header id="page-header">
+
+        <!-- Header Content -->
+        <div class="content-header">
+            <!-- Left Section -->
+            <div class="content-header-section">
+                <a href="index.html" class="group inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-blue-400 hover:text-blue-500">
+                    <img style="height: 30px" src="{% static 'chelex_logo_2.svg' %}" />
+                </a>
+                <!-- Open Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+
+                <!-- END Open Search Section -->
+            </div>
+            <!-- END Left Section -->
+
+            <!-- Right Section -->
+            <div class="content-header-section">
+            </div>
+            <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header">
+
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+            <div class="content-header content-header-fullrow text-center">
+                <div class="content-header-item">
+                    <i class="fa fa-sun-o fa-spin text-white"></i>
+                </div>
+            </div>
+        </div>
+        <!-- END Header Loader -->
+    </header>
+
+    <div
+        class="page-modal__container"
+    >
+        <div class="page-modal__title"><h1>Заявка</h1></div>
+        <div class="page-modal__message">Успешно создана</div>
+        <div class="page-modal__control-container">
+            <button
+                class="page-modal__control-success"
+            >Подтвердить</button>
+        </div>
+    </div>
+    <!-- Main Container -->
+        <main id="main-container">
+            <!-- Page Content -->
+            <div class="bg-primary-darker text-body-color-light">
+                <div class="content content-top">
+                    <div class="row" data-toggle="appear">
+                      <form action="{% url "main:main" %}"" method="post">
+                        {% csrf_token %}
+                        <div class="col-md-12">
+
+                            <input type="hidden" id="refUrl" value="https://chelex.ru/">
+
+                            <div class="row">
+                                <!-- Отдаете -->
+                                <div class="col-md-3">
+                                    <p class="h3" style="padding: 0px 10px 0px;"><span
+                                            class="text-body-color-light">Отдаете</span></p>
+
+                                    <div class="block block-transparent">
+
+                                        <div class="block-content tab-content overflow-hidden">
+                                            <div class="tab-pane fade fade-left show active"
+                                                id="btabs-animated-slideleft-all" role="tabpanel">
+                                                <!-- Сбербанк  - карта-->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='Сбербанк'>
+                                                    <div class="block-content block-content-full clearfix from-currency"
+                                                        export-code="Sberbank" currency-type="target" currency-id="7" cashe="from-card"
+                                                        currency-src="{% static 'front/img/sberbank.svg' %}" currency-name="Сбербанк">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/sberbank.svg' %}" alt="Сбербанк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Сбербанк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="1500">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Альфа-Банк  - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='Альфа-Банк'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="Alfa-bank" currency-type="target" currency-id="9" cashe="from-card"
+                                                        currency-src="{% static 'front/img/alphabank.svg' %}" currency-name="Альфа Банк">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/alphabank.svg' %}" alt="Альфа Банк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Альфа Банк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="1500">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Райффайзенбанк - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='Райффайзен Банк'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="Raiffeisen Bank" currency-type="target" currency-id="82" cashe="from-card"
+                                                        currency-src="{% static 'front/img/rfb.png' %}" currency-name="Райффайзен Банк">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/rfb.png' %}" alt="Райффайзен Банк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Райффайзен Банк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="1000">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Наличные - карта(пока что)  -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='Наличные'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="Cash" currency-type="target" currency-id="2" cashe="from-card"
+                                                        currency-src="{% static 'front/img/nal.png' %}" currency-name="currency">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/nal.png' %}" alt="Наличные">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Наличные</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="1000">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- KZT VISA  - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                   href="#">
+                                                   <input type="hidden" name="input" value='KZT VISA'>
+                                                   <div class="block-content block-content-full clearfix from-currency"
+                                                        export-code="KZT VISA" currency-type="target" currency-id="50" cashe="from-card"
+                                                        currency-src="{% static 'front/img/visamc_rur.svg' %}"currency-name="KZT VISA">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/visamc_rur.svg' %}" alt="KZT VISA">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">KZT VISA</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="15000">0</span> KZT </div>
+                                                   </div>
+                                                </a>
+                                                <!-- USD VISA - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='USD VISA'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="USD VISA" currency-type="target" currency-id="50" cashe="from-card"
+                                                        currency-src="{% static 'front/img/visamc_rur.svg' %}" currency-name="USD-VISA">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/visamc_rur.svg' %}" alt="USD VISA">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">USD VISA</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="15000">0</span> USD </div>
+                                                    </div>
+                                                </a>
+                                                <!-- USDT TRC20 - кошелек -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='USDT TRC20'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="USDT TRC20" currency-type="target" currency-id="50" cashe="from-purse"
+                                                        currency-src="{% static 'front/img/tether.svg' %}" currency-name="USDT TRC20">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/tether.svg' %}" alt="USDT TRC20">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">USDT TRC20</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="15000">0</span> USD </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Bitcoin  - кошелек -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='Bitcoin'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="Bitcoin" currency-type="target" currency-id="1" cashe="from-purse"
+                                                        currency-src="{% static 'front/img/bitcoin.svg' %}" currency-name="Bitcoin">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/bitcoin.svg' %}" alt="Bitcoin">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Bitcoin</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От
+                                                            <span>0.015</span> BTC
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- AED Наличные - карта  -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
+                                                    href="#">
+                                                    <input type="hidden" name="input" value='AED Наличные'>
+                                                    <div class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="AED cash" currency-type="target" currency-id="86" cashe="from-card"
+                                                        currency-src="{% static 'front/img/nal.png' %}" currency-name="AED">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/nal.png' %}" alt="AED Наличные">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">AED Наличные</div>
+                                                        <div class="font-size-sm font-w600 text-muted">От <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="2500">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Получаете -->
+                                <div class="col-md-3">
+                                    <p class="h3" style="padding: 0px 10px 0px;"><span
+                                            class="text-body-color-light">Получаете</span></p>
+                                    <div class="block block-transparent">
+                                        <div class="block-content tab-content overflow-hidden">
+                                            <div class="tab-pane fade fade-left show active"
+                                                id="btabs-animated-slideleft-outcome-all" role="tabpanel">
+                                                <!-- Сбербанк  - карта-->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right  to-currency currency-type"
+                                                    export-code="Sberbank" currency-type="target" currency-id="1" cashe="to-card"
+                                                    currency-src="{% static 'front/img/sberbank.svg' %}" currency-name="Сбербанк" href="javascript:void(0)">
+                                                    <input type="hidden" name="output" value='Сбербанк'>
+                                                    <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/sberbank.svg' %}" alt="Сбербанк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Сбербанк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                            data-toggle="countTo" data-speed="1000"
+                                                            data-to="1000">0</span> RUB
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Альфа-Банк  - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right  to-currency currency-type"
+                                                    export-code="Alfa bank" currency-type="target" currency-id="82" cashe="to-card"
+                                                    currency-src="{% static 'front/img/alphabank.svg' %}" currency-name="Альфа Банк"
+                                                    href="javascript:void(0)">
+                                                    <input type="hidden" name="output" value='Альфа-Банк'>
+                                                    <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                            src="{% static 'front/img/alphabank.svg' %}" alt="Альфа Банк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Альфа Банк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="1000.73">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Райффайзенбанк - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right  to-currency currency-type"
+                                                    export-code="Raiffeisen bank" currency-type="target" currency-id="2" cashe="to-card"
+                                                    currency-src="{% static 'front/img/rfb.png' %}" currency-name="Райффайзен Банк"
+                                                    href="javascript:void(0)">
+                                                    <input type="hidden" name="output" value='Райффайзен Банк'>
+                                                    <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                            src="{% static 'front/img/rfb.png' %}" alt="Райффайзен Банк">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Райффайзен Банк</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="100"
+                                                                data-to="500">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Наличные - карта(пока что)  -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right  to-currency currency-type"
+                                                    export-code="Cash" currency-type="target" currency-id="3" cashe="to-card"
+                                                    currency-src="{% static 'front/img/nal.png' %}" currency-name="currency"
+                                                    href="javascript:void(0)">
+                                                    <input type="hidden" name="output" value='Наличные'>
+                                                    <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/nal.png' %}" alt="Наличные">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Наличные</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="200000">0</span> KZT </div>
+                                                    </div>
+                                                </a>
+                                                <!-- KZT VISA  - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right  to-currency currency-type"
+                                                        class="block-content block-content-full clearfix  from-currency"
+                                                        cashe="to-card"
+                                                        export-code="KZT VISA" currency-type="target" currency-id="4"
+                                                        currency-src="{% static 'front/img/visamc_rur.svg' %}" currency-name="KZT VISA" href="javascript:void(0)">
+                                                        <input type="hidden" name="output" value='KZT VISA'>
+                                                        <div class="block-content block-content-full clearfix">
+
+                                                            <div class="float-left mt-10 d-none d-sm-block">
+                                                                <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/visamc_rur.svg' %}" alt="KZT VISA">
+                                                            </div>
+                                                            <div class="font-size-md font-w600">KZT VISA</div>
+                                                            <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="15000">0</span> KZT </div>
+                                                        </div>
+                                                </a>
+                                                <!-- USD VISA - карта -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right to-currency currency-type"
+                                                        class="block-content block-content-full clearfix  from-currency"
+                                                        export-code="USD VISA" currency-type="target" currency-id="5" cashe="to-card"
+                                                        currency-src="{% static 'front/img/visamc_rur.svg' %}" currency-name="KZT"
+                                                        href="javascript:void(0)">
+                                                        <input type="hidden" name="output" value='USD VISA'>
+                                                        <div class="block-content block-content-full clearfix">
+                                                            <div class="float-left mt-10 d-none d-sm-block">
+                                                                <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                    src="{% static 'front/img/visamc_rur.svg' %}" alt="USD VISA">
+                                                            </div>
+                                                            <div class="font-size-md font-w600">USD VISA</div>
+                                                            <div class="font-size-sm font-w600 text-muted">До <span
+                                                                    data-toggle="countTo" data-speed="1000"
+                                                                    data-to="15000">0</span> USD </div>
+                                                        </div>
+                                                </a>
+                                                <!-- USDT TRC20 - кошелек -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right to-currency currency-type"
+                                                        export-code="USDT TRC20" currency-type="target" currency-id="6" cashe="to-purse"
+                                                        currency-src="{% static 'front/img/tether.svg' %}" currency-name="USDT TRC20"
+                                                        href="javascript:void(0)">
+                                                        <input type="hidden" name="output" value='USDT TRC20'>
+                                                        <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/tether.svg' %}" alt="USDT TRC20">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">USDT TRC20</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="15000">0</span> USD </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Bitcoin  - кошелек -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right to-currency currency-type"
+                                                        export-code="Bitcoin" currency-type="target" currency-id="7" cashe="to-purse"
+                                                        currency-src="{% static 'front/img/bitcoin.svg' %}" currency-name="Bitcoin"
+                                                        href="javascript:void(0)">
+                                                        <input type="hidden" name="output" value='Bitcoin'>
+                                                        <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/bitcoin.svg' %}" alt="Bitcoin">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">Bitcoin</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До
+                                                            <span>0.015</span> BTC
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- AED Наличные - карта  -->
+                                                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right to-currency currency-type"
+                                                        export-code="AED-RUB" currency-type="target" currency-id="8" cashe="to-card"
+                                                        currency-src="{% static 'front/img/nal.png' %}" currency-name="AED"
+                                                        href="javascript:void(0)">
+                                                        <input type="hidden" name="output" value='AED Наличные'>
+                                                        <div class="block-content block-content-full clearfix">
+                                                        <div class="float-left mt-10 d-none d-sm-block">
+                                                            <img style="border-radius: 30px; transition: .3s; max-height: 30px; max-width: 30px;"
+                                                                src="{% static 'front/img/nal.png' %}" alt="AED Наличные">
+                                                        </div>
+                                                        <div class="font-size-md font-w600">AED Наличные</div>
+                                                        <div class="font-size-sm font-w600 text-muted">До <span
+                                                                data-toggle="countTo" data-speed="1000"
+                                                                data-to="2500">0</span> RUB </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <p class="h3" style="padding: 0px 10px 0px;"><span
+                                            class="text-body-color-light">&nbsp;</span></p>
+                                    <div class="block block-transparent">
+                                        <div id="transaction-form" class="block-content tab-content overflow-hidden">
+                                            <div class="exchange-form">
+                                                <!--  Верхняя таблица -->
+                                                <div class="tab-pane fade fade-left show active"
+                                                    id="btabs-animated-slideleft-all" role="tabpanel">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="block block-rounded block-themed block-transparent bg-black-op">
+
+                                                                <div class="block-header bg-transparent">
+                                                                    <h3 class="block-title">
+                                                                        Новая заявка
+                                                                    </h3>
+                                                                    <div class="block-options">
+                                                                        <button type="button" class="btn-block-option"
+                                                                            data-toggle="block-option"
+                                                                            data-action="state_toggle"
+                                                                            data-action-mode="demo">
+                                                                            <i class="si si-refresh"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="block-content">
+                                                                    <div class="py-20 text-center">
+                                                                        <div class="mb-20">
+                                                                            <i
+                                                                                class="fa fa-arrows-h fa-4x text-warning"></i>
+                                                                        </div>
+                                                                        <div class="font-size-h4 font-w600">Выберите
+                                                                            направление обмена</div>
+                                                                        <div class="text-muted">Выберите требуемую
+                                                                            валютную пару в блоках «Отдаете» и
+                                                                            «Получаете»
+                                                                            расположенных слева</div>
+                                                                    </div>
+                                                                    <div class="row py-20">
+                                                                        <div class="col-6 text-right border-r">
+                                                                            <div id="income-currency-selector" class=""
+                                                                                data-toggle="appear"
+                                                                                data-class="animated fadeInLeft">
+                                                                                <div class="font-size-h3 font-w600">
+                                                                                    Отдаете</div>
+                                                                                    <div
+                                                                                    class="font-size-sm font-w600 text-uppercase text-muted">
+                                                                                    Не выбрано</div>
+                                                                            </div>
+                                                                            <input hidden class="change-from" name="change_value_from" value="from" />
+                                                                        </div>
+                                                                        <div class="col-6">
+                                                                            <div id="outcome-currency-selector"
+                                                                                data-toggle="appear"
+                                                                                data-class="animated fadeInRight">
+                                                                                <div class="font-size-h3 font-w600">
+                                                                                    Получаете</div>
+                                                                                    <div
+                                                                                    class="font-size-sm font-w600 text-uppercase text-muted">
+                                                                                    Не выбрано</div>
+                                                                            </div>
+                                                                            <input hidden class="change-to" name="change_value_to" value="to" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!--
+                                                ЧТО ОНИ ВООБЩЕ ЗДЕСЬ ДЕЛАЮТ
+                                                <meta name="csrf-param" content="_csrf-frontend">
+                                                <meta name="csrf-token" content="gl6Wxq4lpbOiMveIGZPk4B1oi78295-x4MWSmyxwtKfrDMO23mr65MkFmN5WoZODSwLG7nyCrYLZkf3CQBX9kA=="> -->
+
+                                                <!-- Нижняяя таблица -->
+                                            </div>
+                                            <div class="transaction-form hidden">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="block block-rounded block-themed block-transparent bg-black-op">
+                                                            <div class="block-header bg-transparent">
+                                                                <h3 class="block-title">Заявка на обмен Сбербанк на
+                                                                    Advanced Cash EUR</h3>
+
+                                                                <div class="block-options">
+                                                                    <button type="button" class="btn-block-option"
+                                                                        data-toggle="block-option"
+                                                                        data-action="state_toggle"
+                                                                        data-action-mode="demo">
+                                                                        <i class="si si-refresh"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="block-content">
+                                                                <p>Среднее время обработки заявки на обмен — 03 мин. 51
+                                                                    сек.</p>
+                                                                <!-- <p>КУРС ОБМЕНА: 1 EUR - <span id="exchange-rate"
+                                                                        exchange-rate="0.0088285849340381"
+                                                                        income-to-rub="0.98"
+                                                                        outcome-to-rub="95.783436">113.27</span>
+                                                                    Сбербанк</p> -->
+                                                                <div class="input-group">
+                                                                    <input required="" id="source-amount" type="text"
+                                                                        class="form-control" min="100" name="amount_input"
+                                                                        currency-min="1500" placeholder="Мин.: 1500 RUB"
+                                                                        currency-id="7">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-black" type="button"
+                                                                            style="height:50px;"><i
+                                                                                class="fa fa-refresh"></i></button>
+                                                                    </span>
+                                                                    <input required="" id="target-amount" type="text"
+                                                                        class="form-control" commission="0.00000000"
+                                                                        min="" currency-max="15000.00" name="amount_output"
+                                                                        reserve="51141.00"
+                                                                        placeholder="Макс.: 15,000.00 EUR"
+                                                                        currency-id="30">
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-5 text-left">
+                                                                        <span id="min-sum-warning" class="text-danger"
+                                                                            style="display: none">Мин. сумма: 1500
+                                                                            RUB</span>
+                                                                    </div>
+                                                                    <div class="col-md-7 text-right text-danger">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="error-text">
+                                                                    <div id="error-left" class="text-left text-danger">
+                                                                    </div>
+                                                                    <div id="error-right"
+                                                                        class="text-right text-danger"></div>
+                                                                </div>
+                                                                <br>
+                                                                <div class="form-group">
+                                                                    <p for="teleg"><b>Ваш логин телеграмм</b></p>
+                                                                    <input required="" name="telegram_login"
+                                                                        placeholder="Например: @change"
+                                                                        type="text" class="form-control" id="teleg">
+                                                                </div>
+
+
+
+                                                                <div class="form-group">
+                                                                    <p for="sender-card" class="sender-card"><b>Номер карты отправителя</b>
+                                                                    </p>
+                                                                    <input required=""
+                                                                        placeholder="Номер карты Сбербанк, 16-18 цифр"
+                                                                        type="text" class="form-control sender"
+                                                                        id="sender-card" name="input_card">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <p for="sender-fio"><b>Ф.И.О. отправителя</b></p>
+                                                                    <input required=""
+                                                                        placeholder="Ф.И.О. владельца карты, полностью"
+                                                                        type="text" class="form-control" name="fio"
+                                                                        id="sender-fio">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <p for="wallet" class="wallet"><b>Кошелёк получателя</b></p>
+                                                                    <input required=""
+                                                                        placeholder="Например: U123456789012 или name@mail.ru"
+                                                                        type="text" class="form-control customer" id="wallet" name="output_card">
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <label
+                                                                                class="control-label">Примечание</label>
+                                                                            <input required="" id="description" name="description"
+                                                                                type="text" class="form-control"
+                                                                                placeholder="Максимум 255 символов">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end of /.team-member-description -->
+                                                            <!-- id="transaction-submit" -->
+                                                            <button
+                                                                class="btn btn-block btn-alt-primary" type="submit"
+                                                                style="width: 100%" is-aml="">Начать обмен
+                                                            </button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END Page Content -->
+        </main>
+        <!-- END Main Container -->
+        <!-- Footer -->
+        <footer id="page-footer" class="bg-primary-darker text-body-color-light">
+            <!-- <div class="content py-20 font-size-sm clearfix">
+                <div class="banners" style="text-align: center">
+                    <a href="https://www.bestchange.ru/darken-exchanger.html"><img
+                            src="https://www.bestchange.ru/bestchange.gif" title="Обмен QIWI, Bitcoin, Tether, AdvCash"
+                            alt="Мониторинг обменных пунктов BestChange" width="88" height="31" border="0" /></a>
+                </div>
+                <div class="float-right">
+
+                </div>
+                <div class="float-left">
+                    <a class="font-w600" href="index.html" target="_blank">darken</a> &copy; <span
+                        class="js-year-copy"></span>
+                </div>
+            </div> -->
+        </footer>
+    </div>
+
+    </div>
+    <script src="{% static 'front/js/codebase.core.min.js' %}"></script>
+    <script src="{% static 'front/js/codebase.app.min.js' %}"></script>
+    <script src="{% static 'front/js/sub-main.js' %}"></script>
+    <script src="{% static 'front/js/dark.min.js@v=1.0.14' %}"></script>
+    <script src="{% static 'front/js/core/jquery.magnific-popup.min.js@v=1.0.10' %}"></script>
+</body>
+
+</html>

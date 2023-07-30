@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru-RU.utf8">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="o_BMnuIpS89CnEQhnv69mdQxQBz9vV4yKciLtA1VfXHIpBP2qmZ59ybaL3vxy_vw52cXV7riGW1AmfHMYzo8Fw==">
+    <title>Вход</title>
+    <meta charset="UTF-8">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" id="css-main" href="../css/codebase.min.css">
+    <link rel="stylesheet" id="css-main-overwrite" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
+</head>
+<body>
+<div id="page-container" class="enable-page-overlay side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
+
+    <!-- Header -->
+    <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+            <!-- Left Section -->
+            <div class="content-header-section">
+                <a href="../index.html" class="group inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-blue-400 hover:text-blue-500">
+                    <img style="height: 30px" src="../img/logo.png" />
+                </a>
+                <!-- Open Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+
+                <!-- END Open Search Section -->
+            </div>
+            <!-- END Left Section -->
+
+            <!-- Right Section -->
+            <div class="content-header-section">
+                <a id="aml-modal-btn" type="button" class="btn btn-dual-secondary" href="login.html#">
+                    AML/KYC
+                </a>
+                <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+                    <i class="fa fa-search"></i>
+                </button>
+                <!-- User Dropdown -->
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="../index.html">
+                        Заявки
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="reserves.html">
+                        Резервы
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="partners.html">
+                        Партнерам
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="guarantees.html">
+                        Гарантии
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="contact.html">
+                        Контакты
+                    </a>
+
+                    <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+                                                    <a type="button" class="btn btn-link dropdown-item" href="login.html">
+                                Войти
+                            </a>
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header">
+            <div class="content-header content-header-fullrow">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- Close Search Section -->
+                            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                            <button type="button" class="btn btn-secondary px-15" data-toggle="layout" data-action="header_search_off">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <!-- END Close Search Section -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="Номер вашей заявки ..." id="page-header-search-input" name="page-header-search-input">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary px-15">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+            <div class="content-header content-header-fullrow text-center">
+                <div class="content-header-item">
+                    <i class="fa fa-sun-o fa-spin text-white"></i>
+                </div>
+            </div>
+        </div>
+        <!-- END Header Loader -->
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="bg-primary-darker text-body-color-light">
+            <div class="content content-top">
+                <div class="row" data-toggle="appear">
+                    <div class="col-md-12">
+                        <div class="row mx-0 justify-content-center text-body-color">
+    <div class="hero-static">
+        <div class="content content-full overflow-hidden">
+            <div class="py-30 text-center text-body-color-light">
+                <a class="link-effect font-w700" href="../index.html">
+                    <span class="font-size-xl text-primary-dark">Darken</span> <span class="font-size-xl text-warning">cash</span>
+                </a>
+                <h1 class="h4 font-w700 mt-30 mb-10 text-body-color-light">Авторизация</h1>
+            </div>
+            <form id="login-form" action="login.html" method="post">
+<input type="hidden" name="_csrf-frontend" value="o_BMnuIpS89CnEQhnv69mdQxQBz9vV4yKciLtA1VfXHIpBP2qmZ59ybaL3vxy_vw52cXV7riGW1AmfHMYzo8Fw==">            <div class="block block-themed block-rounded block-shadow">
+                <div class="block-content">
+                    <div class="form-group field-loginform-username required">
+<label class="control-label" for="loginform-username">Логин</label>
+<input type="text" id="loginform-username" class="form-control" name="LoginForm[username]" autofocus aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>
+                    <div class="form-group field-loginform-password required">
+<label class="control-label" for="loginform-password">Пароль</label>
+<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>
+
+                    <div class="form-group row mb-0">
+                        <div class="col-sm-6 push mb-0">
+                            <div class="">
+                                <div class="form-group field-loginform-rememberme">
+<div class="checkbox">
+<label for="loginform-rememberme">
+<input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked>
+Запомнить
+</label>
+<p class="help-block help-block-error"></p>
+
+</div>
+</div>                            </div>
+                        </div>
+                        <div class="col-sm-6 text-sm-right push mb-0">
+                            <button type="submit" class="btn btn-alt-success">
+                                <i class="fa fa-user mr-10"></i> Войти
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-content bg-body-light">
+                    <div class="text-center">
+                        <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="signup.html">
+                            <i class="fa fa-plus text-muted mr-5"></i> Регистрация
+                        </a>
+                        <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="request-password-reset.html">
+                            <i class="fa fa-key text-muted mr-5"></i> Забыли пароль?
+                        </a>
+                    </div>
+                </div>
+                <div class="block-content text-center">
+                    <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="agreements.html">
+                        <span class="text-muted">Пользовательское соглашение</span>
+                    </a>
+                </div>
+            </div>
+            </form>        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+    <!-- Footer -->
+    <footer id="page-footer" class="bg-primary-darker text-body-color-light">
+        <div class="content py-20 font-size-sm clearfix">
+            <div class="banners" style="text-align: center">
+                <a href="https://www.bestchange.ru/darken-exchanger.html"><img
+                            src="https://www.bestchange.ru/bestchange.gif"
+                            title="Обмен QIWI, Bitcoin, Tether, AdvCash"
+                            alt="Мониторинг обменных пунктов BestChange"
+                            width="88" height="31" border="0" /></a>
+            </div>
+            <div class="float-right">
+
+            </div>
+            <div class="float-left">
+                <a class="font-w600" href="../index.html" target="_blank">darken</a> &copy; <span class="js-year-copy"></span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<section>
+    <div class="modal" id="request-reserve-modal" tabindex="-1" role="dialog"
+         aria-labelledby="request-reserve-modal-label" style="display: none;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Запрос резерва</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="request-reserve-modal-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="autofill-list-modal" class="modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="autofill-list-modal" type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                </button>
+                <h3 id="autofill-list-header">Автозаполнение</h3>
+            </div>
+            <div class="modal-body">
+                <div id="autofill-list-modal-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/codebase.core.min.js"></script>
+<script src="../js/codebase.app.min.js"></script>
+<script src="../js/dark.min.js@v=1.0.14"></script>
+<script src="../js/core/jquery.magnific-popup.min.js@v=1.0.10"></script>
+<!-- Start of Rocket.Chat Livechat Script -->
+    <script type="text/javascript">
+      (function(w, d, s, u) {
+        w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+        var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+        j.async = true; j.src = 'https://chat.darken.cash/livechat/rocketchat-livechat.min.js?_=201903270000';
+        h.parentNode.insertBefore(j, h);
+      })(window, document, 'script', 'https://chat.darken.cash/livechat');
+    </script>
+</body>
+</html>

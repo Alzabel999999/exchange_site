@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ru-RU.utf8">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="lwxZd8TPb4Iiau0VWDFhdLNmZHJnXRK1rI26bYDj3Sr8WAYfjIBdukYshk83BCcdgDAzOSACVerF3MAV7oycTA==">
+    <title>Резервы</title>
+    <meta charset="UTF-8">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" id="css-main" href="../css/codebase.min.css">
+    <link rel="stylesheet" id="css-main-overwrite" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
+</head>
+<body>
+<div id="page-container" class="enable-page-overlay side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
+
+    <!-- Header -->
+    <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+            <!-- Left Section -->
+            <div class="content-header-section">
+                <a href="../index.html" class="group inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-blue-400 hover:text-blue-500">
+                    <img style="height: 30px" src="../img/logo.png" />
+                </a>
+                <!-- Open Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+
+                <!-- END Open Search Section -->
+            </div>
+            <!-- END Left Section -->
+
+            <!-- Right Section -->
+            <div class="content-header-section">
+                <a id="aml-modal-btn" type="button" class="btn btn-dual-secondary" href="reserves.html#">
+                    AML/KYC
+                </a>
+                <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+                    <i class="fa fa-search"></i>
+                </button>
+                <!-- User Dropdown -->
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="../index.html">
+                        Заявки
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="reserves.html">
+                        Резервы
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="partners.html">
+                        Партнерам
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="guarantees.html">
+                        Гарантии
+                    </a>
+                    <a type="button" class="btn btn-link btn-dual-secondary" href="contact.html">
+                        Контакты
+                    </a>
+
+                    <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+                                                    <a type="button" class="btn btn-link dropdown-item" href="login.html">
+                                Войти
+                            </a>
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header">
+            <div class="content-header content-header-fullrow">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- Close Search Section -->
+                            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                            <button type="button" class="btn btn-secondary px-15" data-toggle="layout" data-action="header_search_off">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <!-- END Close Search Section -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="Номер вашей заявки ..." id="page-header-search-input" name="page-header-search-input">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary px-15">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+            <div class="content-header content-header-fullrow text-center">
+                <div class="content-header-item">
+                    <i class="fa fa-sun-o fa-spin text-white"></i>
+                </div>
+            </div>
+        </div>
+        <!-- END Header Loader -->
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="bg-primary-darker text-body-color-light">
+            <div class="content content-top">
+                <div class="row" data-toggle="appear">
+                    <div class="col-md-12">
+                        
+<div class="row js-appear-enabled animated fadeIn row mx-0 justify-content-center text-body-color" data-toggle="appear">
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/bitcoin.svg" alt="Bitcoin">
+                        </p>
+                        <p class="font-w600">Bitcoin</p>
+                        <p class="font-w600 text-muted">17.10 BTC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/io.svg" alt="ЮMoney">
+                        </p>
+                        <p class="font-w600">ЮMoney</p>
+                        <p class="font-w600 text-muted">4 275 541.32 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/perfect_money.svg" alt="Perfect Money">
+                        </p>
+                        <p class="font-w600">Perfect Money</p>
+                        <p class="font-w600 text-muted">3 056 915.98 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/litecoin.svg" alt="Litecoin">
+                        </p>
+                        <p class="font-w600">Litecoin</p>
+                        <p class="font-w600 text-muted">3 288.33 LTC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/ethereum.svg" alt="Ethereum">
+                        </p>
+                        <p class="font-w600">Ethereum</p>
+                        <p class="font-w600 text-muted">1 543.12 ETH</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/payeer.svg" alt="Payeer USD">
+                        </p>
+                        <p class="font-w600">Payeer USD</p>
+                        <p class="font-w600 text-muted">529 884.09 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/sberbank.svg" alt="Сбербанк">
+                        </p>
+                        <p class="font-w600">Сбербанк</p>
+                        <p class="font-w600 text-muted">11 823 327.29 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/tcsbank.svg" alt="Тинькофф">
+                        </p>
+                        <p class="font-w600">Тинькофф</p>
+                        <p class="font-w600 text-muted">7 982 206.80 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/alphabank.svg" alt="Альфа Банк">
+                        </p>
+                        <p class="font-w600">Альфа Банк</p>
+                        <p class="font-w600 text-muted">4 916 937.21 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/vtb.svg" alt="VTB">
+                        </p>
+                        <p class="font-w600">VTB</p>
+                        <p class="font-w600 text-muted">5 578 742.38 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/visamc_rur.svg" alt="Visa / MasterCard">
+                        </p>
+                        <p class="font-w600">Visa / MasterCard</p>
+                        <p class="font-w600 text-muted">9 262 625.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash USD">
+                        </p>
+                        <p class="font-w600">Advanced Cash USD</p>
+                        <p class="font-w600 text-muted">202 546.11 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/qiwi.svg" alt="QIWI">
+                        </p>
+                        <p class="font-w600">QIWI</p>
+                        <p class="font-w600 text-muted">2 052 830.32 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/rstandart.png" alt="Русский Стандарт">
+                        </p>
+                        <p class="font-w600">Русский Стандарт</p>
+                        <p class="font-w600 text-muted">879 589.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/gazprom.png" alt="Газпром Банк">
+                        </p>
+                        <p class="font-w600">Газпром Банк</p>
+                        <p class="font-w600 text-muted">741 845.06 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/homecredit.png" alt="Банк Хоум Кредит">
+                        </p>
+                        <p class="font-w600">Банк Хоум Кредит</p>
+                        <p class="font-w600 text-muted">974 856.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/binbank.png" alt="Бинбанк">
+                        </p>
+                        <p class="font-w600">Бинбанк</p>
+                        <p class="font-w600 text-muted">741 832.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/rosselhoz.png" alt="Россельхоз Банк">
+                        </p>
+                        <p class="font-w600">Россельхоз Банк</p>
+                        <p class="font-w600 text-muted">635 941.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/promsvyaz.png" alt="Промсвязьбанк">
+                        </p>
+                        <p class="font-w600">Промсвязьбанк</p>
+                        <p class="font-w600 text-muted">4 747 553.44 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/exmo.svg" alt="Exmo RUB">
+                        </p>
+                        <p class="font-w600">Exmo RUB</p>
+                        <p class="font-w600 text-muted">1 888 056.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/exmo.svg" alt="Exmo USD">
+                        </p>
+                        <p class="font-w600">Exmo USD</p>
+                        <p class="font-w600 text-muted">15 236.00 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/otkritie.png" alt="Банк Открытие">
+                        </p>
+                        <p class="font-w600">Банк Открытие</p>
+                        <p class="font-w600 text-muted">6 351 000.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/perfect_money.svg" alt="Perfect Money EUR">
+                        </p>
+                        <p class="font-w600">Perfect Money EUR</p>
+                        <p class="font-w600 text-muted">144 917.22 EUR</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash EUR">
+                        </p>
+                        <p class="font-w600">Advanced Cash EUR</p>
+                        <p class="font-w600 text-muted">50 791.00 EUR</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash RUB">
+                        </p>
+                        <p class="font-w600">Advanced Cash RUB</p>
+                        <p class="font-w600 text-muted">1 800 001.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/etc.svg" alt="Ethereum Classic">
+                        </p>
+                        <p class="font-w600">Ethereum Classic</p>
+                        <p class="font-w600 text-muted">2 693.00 ETC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/dash.svg" alt="Dash">
+                        </p>
+                        <p class="font-w600">Dash</p>
+                        <p class="font-w600 text-muted">3 065.04 DASH</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/zcash.svg" alt="Zcash">
+                        </p>
+                        <p class="font-w600">Zcash</p>
+                        <p class="font-w600 text-muted">1 919.50 ZEC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/tether.svg" alt="Tether Omni">
+                        </p>
+                        <p class="font-w600">Tether Omni</p>
+                        <p class="font-w600 text-muted">100 000.00 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/ripple.svg" alt="Ripple ">
+                        </p>
+                        <p class="font-w600">Ripple </p>
+                        <p class="font-w600 text-muted">2 299 709.28 XRP</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/monero.svg" alt="Monero ">
+                        </p>
+                        <p class="font-w600">Monero </p>
+                        <p class="font-w600 text-muted">52 344.60 XMR</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/bch.svg" alt="Bitcoin Cash">
+                        </p>
+                        <p class="font-w600">Bitcoin Cash</p>
+                        <p class="font-w600 text-muted">10 033.24 BCH</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/tether.svg" alt="Tether ERC20">
+                        </p>
+                        <p class="font-w600">Tether ERC20</p>
+                        <p class="font-w600 text-muted">3 145 223.62 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/rfb.png" alt="Райффайзен Банк">
+                        </p>
+                        <p class="font-w600">Райффайзен Банк</p>
+                        <p class="font-w600 text-muted">4 556 599.82 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/visamc_rur.svg" alt="Любой банк RUB">
+                        </p>
+                        <p class="font-w600">Любой банк RUB</p>
+                        <p class="font-w600 text-muted">802 176.19 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/tether.svg" alt="Tether TRC20">
+                        </p>
+                        <p class="font-w600">Tether TRC20</p>
+                        <p class="font-w600 text-muted">3 306 646.27 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/qiwi.svg" alt="QIWI KZT">
+                        </p>
+                        <p class="font-w600">QIWI KZT</p>
+                        <p class="font-w600 text-muted">200 000.00 KZT</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/doge.png" alt="Dogecoin">
+                        </p>
+                        <p class="font-w600">Dogecoin</p>
+                        <p class="font-w600 text-muted">276 269.60 DOGE</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/xlm.png" alt="Stellar">
+                        </p>
+                        <p class="font-w600">Stellar</p>
+                        <p class="font-w600 text-muted">572 549.21 XLM</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/trx.png" alt="Tron">
+                        </p>
+                        <p class="font-w600">Tron</p>
+                        <p class="font-w600 text-muted">3 197 031.44 TRX</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/bnb.png" alt="Binance coin">
+                        </p>
+                        <p class="font-w600">Binance coin</p>
+                        <p class="font-w600 text-muted">5 006.00 BNB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/bnb.png" alt="Binance coin (BEP20)">
+                        </p>
+                        <p class="font-w600">Binance coin (BEP20)</p>
+                        <p class="font-w600 text-muted">2 504.49 BNB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/payeer.svg" alt="Payeer RUB">
+                        </p>
+                        <p class="font-w600">Payeer RUB</p>
+                        <p class="font-w600 text-muted">3 901 720.06 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/payeer.svg" alt="Payeer EUR">
+                        </p>
+                        <p class="font-w600">Payeer EUR</p>
+                        <p class="font-w600 text-muted">99 824.40 EUR</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash KZT">
+                        </p>
+                        <p class="font-w600">Advanced Cash KZT</p>
+                        <p class="font-w600 text-muted">2 310 001.00 KZT</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash UAH">
+                        </p>
+                        <p class="font-w600">Advanced Cash UAH</p>
+                        <p class="font-w600 text-muted">7 896 540.00 UAH</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/advcash.svg" alt="Advanced Cash TRY">
+                        </p>
+                        <p class="font-w600">Advanced Cash TRY</p>
+                        <p class="font-w600 text-muted">2 356 410.00 TRY</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/matic.webp" alt="Polygon">
+                        </p>
+                        <p class="font-w600">Polygon</p>
+                        <p class="font-w600 text-muted">208 942.71 MATIC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/usdc.webp" alt="USD Coin (USDC)">
+                        </p>
+                        <p class="font-w600">USD Coin (USDC)</p>
+                        <p class="font-w600 text-muted">3 238 620.00 USDC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="https://darken.biz/img/busd.png" alt="BUSD">
+                        </p>
+                        <p class="font-w600">BUSD</p>
+                        <p class="font-w600 text-muted">3 268 425.37 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/dai.webp" alt="Dai (DAI)">
+                        </p>
+                        <p class="font-w600">Dai (DAI)</p>
+                        <p class="font-w600 text-muted">3 267 010.00 DAI</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/xem.webp" alt="NEM (XEM)">
+                        </p>
+                        <p class="font-w600">NEM (XEM)</p>
+                        <p class="font-w600 text-muted">1 094 970.00 XEM</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/neo.webp" alt="NEO (NEO)">
+                        </p>
+                        <p class="font-w600">NEO (NEO)</p>
+                        <p class="font-w600 text-muted">187 410.00 NEO</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/eos.webp" alt="EOS (EOS)">
+                        </p>
+                        <p class="font-w600">EOS (EOS)</p>
+                        <p class="font-w600 text-muted">154 750.00 EOS</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/ada.webp" alt="Cardano (ADA)">
+                        </p>
+                        <p class="font-w600">Cardano (ADA)</p>
+                        <p class="font-w600 text-muted">210 872.00 ADA</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/waves.webp" alt="Waves (WAVES)">
+                        </p>
+                        <p class="font-w600">Waves (WAVES)</p>
+                        <p class="font-w600 text-muted">256 310.00 WAVES</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/omg.webp" alt="OmiseGO (OMG)">
+                        </p>
+                        <p class="font-w600">OmiseGO (OMG)</p>
+                        <p class="font-w600 text-muted">174 510.00 OMG</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/0x.webp" alt="0x (ZRX)">
+                        </p>
+                        <p class="font-w600">0x (ZRX)</p>
+                        <p class="font-w600 text-muted">156 910.00 ZRX</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/btt.webp" alt="BitTorrent (BTT)">
+                        </p>
+                        <p class="font-w600">BitTorrent (BTT)</p>
+                        <p class="font-w600 text-muted">286 423.00 BTTC</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/bat.webp" alt="BAT (BAT)">
+                        </p>
+                        <p class="font-w600">BAT (BAT)</p>
+                        <p class="font-w600 text-muted">251 210.00 BAT</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/qtum.webp" alt="Qtum (QTUM) ">
+                        </p>
+                        <p class="font-w600">Qtum (QTUM) </p>
+                        <p class="font-w600 text-muted">103 200.00 QTUM</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/link.webp" alt="Chainlink (LINK)">
+                        </p>
+                        <p class="font-w600">Chainlink (LINK)</p>
+                        <p class="font-w600 text-muted">223 310.00 LINK</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/xtz.webp" alt="Tezos (XTZ)">
+                        </p>
+                        <p class="font-w600">Tezos (XTZ)</p>
+                        <p class="font-w600 text-muted">245 879.00 XTZ</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/dot.webp" alt="Polkadot (DOT)">
+                        </p>
+                        <p class="font-w600">Polkadot (DOT)</p>
+                        <p class="font-w600 text-muted">247 811.00 DOT</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/shib.webp" alt="Shiba Inu (SHIB)">
+                        </p>
+                        <p class="font-w600">Shiba Inu (SHIB)</p>
+                        <p class="font-w600 text-muted">10 450 632 369.00 SHIB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/sol.webp" alt="Solana (SOL)">
+                        </p>
+                        <p class="font-w600">Solana (SOL)</p>
+                        <p class="font-w600 text-muted">111 450.26 SOL</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/sbp.svg" alt="СБП">
+                        </p>
+                        <p class="font-w600">СБП</p>
+                        <p class="font-w600 text-muted">2 132 507.73 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="https://darken.biz/img/usd.png" alt="Наличные USD">
+                        </p>
+                        <p class="font-w600">Наличные USD</p>
+                        <p class="font-w600 text-muted">698 541.00 USD</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="https://darken.biz/img/usd.png" alt="Наличные TRY">
+                        </p>
+                        <p class="font-w600">Наличные TRY</p>
+                        <p class="font-w600 text-muted">150 236.00 TRY</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="https://darken.biz/img/usd.png" alt="Наличные RUB">
+                        </p>
+                        <p class="font-w600">Наличные RUB</p>
+                        <p class="font-w600 text-muted">3 560 250.00 RUB</p>
+                    </div>
+                </a>
+            </div>
+                    <div class="col-md-2">
+                <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center" href="reserves.html#">
+                    <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+                        <p class="mt-5">
+                            <img style="border-radius: 50px; transition: .3s; max-height: 50px; max-width: 50px;" src="../img/mir.svg" alt="Мир">
+                        </p>
+                        <p class="font-w600">Мир</p>
+                        <p class="font-w600 text-muted">5 517 662.66 RUB</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+    <!-- Footer -->
+    <footer id="page-footer" class="bg-primary-darker text-body-color-light">
+        <div class="content py-20 font-size-sm clearfix">
+            <div class="banners" style="text-align: center">
+                <a href="https://www.bestchange.ru/darken-exchanger.html"><img
+                            src="https://www.bestchange.ru/bestchange.gif"
+                            title="Обмен QIWI, Bitcoin, Tether, AdvCash"
+                            alt="Мониторинг обменных пунктов BestChange"
+                            width="88" height="31" border="0" /></a>
+            </div>
+            <div class="float-right">
+
+            </div>
+            <div class="float-left">
+                <a class="font-w600" href="../index.html" target="_blank">darken</a> &copy; <span class="js-year-copy"></span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<section>
+    <div class="modal" id="request-reserve-modal" tabindex="-1" role="dialog"
+         aria-labelledby="request-reserve-modal-label" style="display: none;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Запрос резерва</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="request-reserve-modal-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="autofill-list-modal" class="modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="autofill-list-modal" type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                </button>
+                <h3 id="autofill-list-header">Автозаполнение</h3>
+            </div>
+            <div class="modal-body">
+                <div id="autofill-list-modal-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/codebase.core.min.js"></script>
+<script src="../js/codebase.app.min.js"></script>
+<script src="../js/dark.min.js@v=1.0.14"></script>
+<script src="../js/core/jquery.magnific-popup.min.js@v=1.0.10"></script>
+<!-- Start of Rocket.Chat Livechat Script -->
+    <script type="text/javascript">
+      (function(w, d, s, u) {
+        w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+        var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+        j.async = true; j.src = 'https://chat.darken.cash/livechat/rocketchat-livechat.min.js?_=201903270000';
+        h.parentNode.insertBefore(j, h);
+      })(window, document, 'script', 'https://chat.darken.cash/livechat');
+    </script>
+</body>
+</html>

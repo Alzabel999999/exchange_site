@@ -1,0 +1,27 @@
+.to-currency-disabled {
+    display: none!important;
+}
+
+.text-primary-main {
+    color: #6c6c6c;
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 700px;
+    margin: 20px auto;
+}
+.tab-pane.fade.fade-left.show{
+    display: block !important;
+}
+.tab-pane.fade.fade-left.show > a{
+    display: block !important;
+}
+
+.transaction-form.hidden{
+    display: none;
+}
+
